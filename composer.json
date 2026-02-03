@@ -1,0 +1,16 @@
+{
+  "name": "rfpmart/uswds-1",
+  "description": "Open-source USWDS template by Ashish Adeshara & RFPMart LLC",
+  "type": "library",
+  "license": "MIT",
+  "version": "1.0.1",
+  "authors": [
+    {
+      "name": "Ashish Adeshara",
+      "organization": "RFPMart LLC"
+    }
+  ],
+  "require": {
+    "php": ">=8.1"
+  }
+}

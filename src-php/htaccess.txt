@@ -1,0 +1,14 @@
+RewriteEngine On
+
+# 1. Force HTTPS
+RewriteCond %{HTTPS} !=on
+RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+
+# 2. Serve .php when .html does not exist
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.+)\.html$ $1.php [L]
+
+# 3. Block direct access to .php
+RewriteCond %{THE_REQUEST} \.php[\s?]
+RewriteRule ^(.+)\.php$ /$1.html [R=301,L]
